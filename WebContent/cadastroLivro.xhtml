@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+<h:head>
+<meta charset="UTF-8" />
+<title>Cadastro de livros</title>
+<h:outputStylesheet library="css"
+name="estilo1.css" />
+</h:head>
+<h:body>
+	<h:form>
+	  <p class="rotulo">Nome do livro:
+	     <h:inputText id="txtNomeLivro"
+value="#{LivroMB.nome}" class="entrada" />
+      </p>
+      <p class="rotulo">Autor:
+         <h:inputText id="txtAutorLivro"
+value="#{LivroMB.autor}" class="entrada" />
+      </p>
+      <p class="rotulo">Número de páginas:
+      	<h:inputText id="txtNumPaginas"
+value="#{LivroMB.paginas}" class="entrada" />
+      </p>
+      <p class="botao">
+   		<h:commandButton action=" cadastroLivro" value="Submit" />
+      </p>
+      
+	</h:form>
+	<p>Livro confirmado: "#{LivroMB.nome}" "#{LivroMB.autor}" "#{LivroMB.paginas}"</p>
+</h:body>
+</html>
